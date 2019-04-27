@@ -1,7 +1,7 @@
 
         .boundary {
             fill: none;
-            stroke: #dfdfdf;
+            stroke: rgb(255, 196, 0);
             stroke-linejoin: round;
         }
 
