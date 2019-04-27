@@ -20,6 +20,11 @@ export class AppComponent {
       .append("svg")
       .attr("width", width)
       .attr("height", height);
+    
+    var div = d3.select("body")
+      .append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
 
     var g = svg.append("g");
 
@@ -37,7 +42,7 @@ export class AppComponent {
         .attr('stroke', 'red');
 
 
-      d3.json('./assets/newstorelocations.json').then(function (locations: any) {
+      d3.json('./assets/storeData.json').then(function (locations: any) {
         console.log('stores', locations);
         console.log("marker", svg.selectAll('marker'));
         /* svg.selectAll('circle')
@@ -66,16 +71,28 @@ export class AppComponent {
           .attr('style','font-family:"Font Awesome 5 Free"')
           .attr('font-weight', '900')
           .attr('fill','brown')
-          .text('\uf54f')
-          .attr('x', function (d: any) { return projection([d.lon, d.lat])[0] })
-          .attr('y', function (d: any) { return projection([d.lon, d.lat])[1] })
-          .on("mouseover", function (b) {
+          .text('\uf3c5')
+          .attr('x', function (d: any) { return projection([d.loc.lon, d.loc.lat])[0] })
+          .attr('y', function (d: any) { return projection([d.loc.lon, d.loc.lat])[1] })
+          .on("mouseover", function (b:any) {
             console.log("b", b)
-            d3.select(this).style("fill", "red").append('text')
-              .text("hi");
+            console.log(d3.event.pageX, d3.event.pageY);
+            
+            d3.select(this).style("fill", "blue");
+            div.transition()
+              .duration(200)
+              .style("opacity", .9);
+            div.text(b.name)
+              .attr("class","tooltip")
+              .style("left", (d3.event.pageX + 10) + "px")
+              .style("top", (d3.event.pageY -25) + "px");   
+            
           })
           .on("mouseout", function () {
-            d3.select(this).style("fill", "blue");
+            d3.select(this).style("fill", "brown");
+            div.transition()
+              .duration(500)
+              .style("opacity", 0); 
           });
       });
     });
