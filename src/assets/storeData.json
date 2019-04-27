@@ -1,0 +1,84 @@
+{
+                "name": "Birmingham",
+                "loc": {
+                  "lat": 33.448064,
+                  "lon": -86.730121
+    }
+},
+{
+                "name": "Huntsville",
+                "loc": {
+                  "lat": 34.714167,
+                  "lon": -86.672799
+    }
+},
+{
+                "name": "Irvine",
+                "loc": {
+                  "lat": 33.650230,
+                  "lon": -117.743294
+    }
+},
+{
+                "name": "Los Angeles,Â Beverly Center",
+                "loc": {
+                  "lat": 34.075024,
+                  "lon": -118.377281
+    }
+},
+{
+                "name": "Los Angeles,Â Century City",
+                "loc": {
+                  "lat": 34.057426,
+                  "lon": -118.414727
+    }
+},
+{
+                "name": "Los Angeles,Â The Grove",
+                "loc": {
+                  "lat": 16.789134,
+                  "lon": -99.814933
+    }
+},
+{
+                "name": "Los Gatos",
+                "loc": {
+                  "lat": 37.204667,
+                  "lon": -121.949957
+    }
+},
+{
+                "name": "Manhattan Beach,Â Manhattan Village",
+                "loc": {
+                  "lat": 33.898559,
+                  "lon": -118.394366
+    }
+},
+{
+                "name": "Newport Beach,Â Fashion Island",
+                "loc": {
+                  "lat": 33.615886,
+                  "lon": -117.875847
+    }
+},
+{
+                "name": "Northridge,Â Northridge",
+                "loc": {
+                  "lat": 34.238125,
+                  "lon": -118.530123
+    }
+},
+{
+                "name": "Palm Desert,Â El Paseo Village",
+                "loc": {
+                  "lat": 33.719821,
+                  "lon": -116.384664
+    }
+},
+{
+                "name": "Palo Alto",
+                "loc": {
+                  "lat": 37.441883,
+                  "lon": -122.143019
+    }
+}

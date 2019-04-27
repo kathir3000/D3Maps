@@ -1,98 +1,12 @@
 [
     {
-        "name": "Bonefish",
-        "StoreDescription": "0301 BFG Willow Grove PA",
-        "AddressLine1": "1015 Easton Rd",
-        "AddressLine2": null,
-        "PostalCode": "19090-2023",
-        "City": "Willow Grove",
-        "StateCode": "PA",
-        "StateName": "Pennsylvania",
+        "name": "Willow Grove",
         "lat": "40.161693572998",
         "lon": "-75.1253509521484"
     },
     {
-        "name": "Bonefish",
-        "StoreDescription": "0302 BFG Exton PA",
-        "AddressLine1": "460 W Lincoln Hwy",
-        "AddressLine2": null,
-        "PostalCode": "19341-2570",
-        "City": "Exton",
-        "StateCode": "PA",
-        "StateName": "Pennsylvania",
+        "name": "Pennsylvania",
         "lat": "40.0334587097168",
         "lon": "-75.5572128295898"
-    },
-    {
-        "name": "Bonefish",
-        "StoreDescription": "0303 BFG Whitehall PA",
-        "AddressLine1": "901 Lehigh Lifestyle Center",
-        "AddressLine2": null,
-        "PostalCode": "18052",
-        "City": "Whitehall",
-        "StateCode": "PA",
-        "StateName": "Pennsylvania",
-        "lat": "41.2423928081989",
-        "lon": "-75.8408070355654"
-    },
-    {
-        "name": "Bonefish",
-        "StoreDescription": "0304 BFG Edgmont PA",
-        "AddressLine1": "4889 West Chester Pike",
-        "AddressLine2": null,
-        "PostalCode": "19073-2213",
-        "City": "Newtown Square",
-        "StateCode": "PA",
-        "StateName": "Pennsylvania",
-        "lat": "40.2369084209204",
-        "lon": "-75.2404924482107"
-    },
-    {
-        "name": "Bonefish",
-        "StoreDescription": "0305 BFG Lancaster PA",
-        "AddressLine1": "970 Plaza Blvd",
-        "AddressLine2": null,
-        "PostalCode": "17601-4132",
-        "City": "Lancaster",
-        "StateCode": "PA",
-        "StateName": "Pennsylvania",
-        "lat": "40.1858431845903",
-        "lon": "-74.8692103475332"
-    },
-    {
-        "name": "Bonefish",
-        "StoreDescription": "0306 BFG Langhorne PA",
-        "AddressLine1": "500 Oxford Valley Road",
-        "AddressLine2": null,
-        "PostalCode": "19047-8307",
-        "City": "Langhorne",
-        "StateCode": "PA",
-        "StateName": "Pennsylvania",
-        "lat": "40.2384500205517",
-        "lon": "-76.9801879674196"
-    },
-    {
-        "name": "Bonefish",
-        "StoreDescription": "0307 BFG Camp Hill Pa",
-        "AddressLine1": "3505 Gettysburg Road",
-        "AddressLine2": null,
-        "PostalCode": "17011-6802",
-        "City": "Camp Hill",
-        "StateCode": "PA",
-        "StateName": "Pennsylvania",
-        "lat": "40.0953063964844",
-        "lon": "-75.2915420532227"
-    },
-    {
-        "name": "Bonefish",
-        "StoreDescription": "0308 BFG Montgomeryville PA",
-        "AddressLine1": "27 Airport Square",
-        "AddressLine2": null,
-        "PostalCode": "19545",
-        "City": "North Wales",
-        "StateCode": "PA",
-        "StateName": "Pennsylvania",
-        "lat": "40.3315773010254",
-        "lon": "-80.068717956543"
     }
 ]
