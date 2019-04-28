@@ -9,9 +9,11 @@ import * as topojson from "topojson";
 })
 export class AppComponent {
   title = 'D3Maps';
+  
   ngAfterContentInit() {
+    
     var height = 600;
-    var width = 900, centered;
+    var width = 900;
 
     var projection = d3.geoAlbersUsa();
     var path = d3.geoPath().projection(projection);
@@ -31,9 +33,10 @@ export class AppComponent {
     d3.json('./assets/us.json').then(function (us: any) {
       console.log("usa", us);
 
-      var map = svg.append('g') //.attr('class', 'boundary');
-      var usa = map.selectAll('path')
-        .data(topojson.feature(us, us.objects.states).features);
+      var map = svg.append('g') //.attr('class', 'boundary'); 
+      var usa = map.selectAll('path') 
+      .data(topojson.feature(us,us.objects.states).features)
+        // .data(topojson.feature(us, us.objects.states)features);
 
       usa.enter()
         .append('path')
@@ -70,7 +73,8 @@ export class AppComponent {
           // .attr('dominant-baseline', 'central')
           .attr('style','font-family:"Font Awesome 5 Free"')
           .attr('font-weight', '900')
-          .attr('fill','brown')
+          .attr('cursor', 'pointer')
+          .attr('fill',(d:any)=>d.colour?d.colour:'black')
           .text('\uf3c5')
           .attr('x', function (d: any) { return projection([d.loc.lon, d.loc.lat])[0] })
           .attr('y', function (d: any) { return projection([d.loc.lon, d.loc.lat])[1] })
@@ -84,17 +88,42 @@ export class AppComponent {
               .style("opacity", .9);
             div.text(b.name)
               .attr("class","tooltip")
-              .style("left", (d3.event.pageX + 10) + "px")
-              .style("top", (d3.event.pageY -25) + "px");   
+              .style("left", (d3.event.pageX+10) + "px")
+              .style("top", (d3.event.pageY -14 ) + "px");   
             
-          })
+          }) 
           .on("mouseout", function () {
             d3.select(this).style("fill", "brown");
             div.transition()
               .duration(500)
               .style("opacity", 0); 
-          });
+          });        
       });
+
+      var color = ["rgb(213,222,217)", "rgb(69,173,168)", "rgb(84,36,55)", "rgb(217,91,67)"];
+
+      var legendText = ["Cities Lived", "States Lived", "States Visited", "Nada"];
+      var legend = d3.select("body").append("svg")
+        .attr("class", "legend")
+        .attr("width", 140)
+        .attr("height", 200)
+        .selectAll("g")
+        .data(color.slice().reverse())
+        .enter()
+        .append("g")
+        .attr("transform", function (d, i) { return "translate(0," + i * 20 + ")"; });
+
+      legend.append("rect")
+        .attr("width", 18)
+        .attr("height", 18)
+        .style("fill", 'red');
+
+      legend.append("text")
+        .data(legendText)
+        .attr("x", 24)
+        .attr("y", 9)
+        .attr("dy", ".35em")
+        .text(function (d:any) { return d; });
     });
   }
 }
